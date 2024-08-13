@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">MainWindow {
+    background-color: rgb(204, 229, 175);
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
@@ -528,8 +533,8 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>650</x>
       <y>360</y>
-      <width>303</width>
-      <height>26</height>
+      <width>316</width>
+      <height>30</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_19">
@@ -562,8 +567,31 @@ p, li { white-space: pre-wrap; }
       <x>660</x>
       <y>300</y>
       <width>89</width>
-      <height>24</height>
+      <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;         /* 设置边框粗细、样式、颜色*/
+    border-radius: 6px;                /* 设置边框圆角 */
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    min-width: 80px;                   /* 设置按键的最小宽度 */
+    min-height: 25px;
+}
+
+QPushButton:pressed{                   /* 设置按键按下样式 */
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {                 /* 设置默认按键样式 */
+    border-color: rgb(85, 170, 255);
+}</string>
     </property>
     <property name="text">
      <string>4G</string>
@@ -572,11 +600,34 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="pushButton_6">
     <property name="geometry">
      <rect>
-      <x>780</x>
+      <x>760</x>
       <y>300</y>
       <width>89</width>
-      <height>24</height>
+      <height>29</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    border: 2px solid #8f8f91;         /* 设置边框粗细、样式、颜色*/
+    border-radius: 6px;                /* 设置边框圆角 */
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    min-width: 80px;                   /* 设置按键的最小宽度 */
+    min-height: 25px;
+}
+
+QPushButton:pressed{                   /* 设置按键按下样式 */
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {                 /* 设置默认按键样式 */
+    border-color: rgb(85, 170, 255);
+}</string>
     </property>
     <property name="text">
      <string>从机</string>

@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QDebug>
+#include <QDateTime>
 static const quint8 modbus_type=0x01;
 static const quint8 g_iapHandshakesFunctionCode = 0xF0;
 static const quint8 g_iapDownloadFunctionCode = 0xF1;
@@ -94,6 +95,7 @@ public:
     void number(quint16& value, const unsigned char* data) const;
     void number(quint32& value, const unsigned char* data) const;
     void Hexstring_to_bytes(QString &s,QByteArray &send);
+    QString current_time();
     unsigned short crc16(const void *s, int n) const;
     quint16 calc_crc16(const QByteArray &array);
     void encode(QByteArray &send);

@@ -47,6 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
     m_pserial_port->moveToThread(&m_serial_port_thread);
     m_p_parse->moveToThread(&m_parse_thread);
     mp_serial_window=new serial_window();
+    mp_rwindow=new r_window();
     connect(&m_serial_port_thread,&QThread::started,m_pserial_port,&serial_port::satrt);
     connect(m_pserial_port,&serial_port::sig_set_com_names,this,&MainWindow::set_com_names);
     connect(this->ui->open_port,&QPushButton::clicked,this,&MainWindow::turn_on_serial_handler);
@@ -98,6 +99,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     m_serial_port_thread.start();
     m_parse_thread.start();
+    mp_rwindow->show();
 //    mp_serial_window->show();
 //    mp_serial_window1->show();
 //    mp_send->show();

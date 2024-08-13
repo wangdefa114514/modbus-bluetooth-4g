@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -31,7 +31,39 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="styleSheet">
+       <string notr="true">QLineEdit 
+{
+ 	padding:1px;
+ 	padding-left:4px;
+    border: 1px solid #aaaaaa;
+    background: white;
+    selection-background-color: #3399ff;
+}
+
+
+/*QLineEdit获得焦点时的属性设置，主要为光晕边框
+这里带了.，所以该属性仅对QLineEdit直接类对象生效，这样做的目的在于，可编辑QTableWidget编辑item时的编辑框不带边框*/
+.QLineEdit:focus1
+{
+  	padding:0px;/*padding，这里边框为2px为了不引起content尺寸变化padding设置为0*/
+    padding-left:3px;
+    border-width:2px;/*边框宽度*/
+	border-style:solid;/*边框类型*/
+	/*用渐变色可以营造光晕边框效果*/
+	border-color:qlineargradient(x1:0, y1:1, x2:0, y2:0, stop:0 #f9b158, stop:1 #ffe189)/*上边框渐变色*/
+	  qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #f9b158, stop:1 #ffe189)/*右边框渐变色*/
+	  qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f9b158, stop:1 #ffe189)/*下边框渐变色*/
+	  qlineargradient(x1:1, y1:0, x2:0, y2:0, stop:0 #f9b158, stop:1 #ffe189);/*左边框渐变色*/
+}
+
+QLineEdit:read-only
+{
+    color: #787878;
+}</string>
+      </property>
+     </widget>
     </item>
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -50,6 +82,18 @@
       </item>
       <item>
        <widget class="QPushButton" name="set_button">
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+	padding:0px 4px;/*上下padding为0px 左右未6px {1,4}为上右下左*/
+	min-width:80;
+	min-height:24;
+	border: 1px solid #aaaaaa;/*边框*/
+	background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #ffffff, stop:0.8 #eeeeee);/*渐变背景色*/
+	outline:none;/*表示foucs状态时取消虚线框*/
+}
+</string>
+        </property>
         <property name="text">
          <string>确定</string>
         </property>

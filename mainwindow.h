@@ -13,6 +13,7 @@
 #include "tables.h"
 #include "serial_window.h"
 #include "serial_window1.h"
+#include "r_window.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -77,5 +78,6 @@ private:
     tables* mp_table=nullptr;
     serial_window* mp_serial_window=nullptr;
     serial_window1* mp_serial_window1=nullptr;
+    r_window* mp_rwindow=nullptr;
 };
 #endif // MAINWINDOW_H
