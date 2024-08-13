@@ -11,11 +11,54 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>从机</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+/* 设置表格行高亮颜色 */
+QTableWidget::item:selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 设置表格标题样式 */
+QHeaderView::section {
+    background-color: #f0f0f0;
+    border: 1px solid #ebebeb;
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+
+/* 鼠标悬停时改变单元格颜色 */
+QTableWidget::item:hover {
+    background-color: #e0e0e0;
+}
+
+/* 设置按钮样式 */
+QPushButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #0062cc;
+}
+
+QPushButton:pressed {
+    background-color: #005cb5;
+}</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_10">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,2">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_12">
        <item>

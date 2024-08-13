@@ -13,6 +13,137 @@
   <property name="windowTitle">
    <string>4G</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/* 主窗口背景颜色 */
+MainWindow {
+    background-color: #3498db;
+}
+
+/* 标题栏颜色 */
+QMenuBar {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* 标题栏项颜色 */
+QMenuBar::item {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+}
+
+/* 标题栏项选中状态颜色 */
+QMenuBar::item:selected {
+    background-color: #3498db;
+}
+
+/* 工具栏背景颜色 */
+QToolBar {
+    background-color: #2c3e50;
+    color: white;
+    spacing: 5px;
+}
+
+/* 工具栏按钮颜色 */
+QToolButton {
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    border: none;
+}
+
+/* 工具栏按钮悬停状态颜色 */
+QToolButton:hover {
+    background-color: #34495e;
+}
+
+/* 工具栏按钮按下状态颜色 */
+QToolButton:pressed {
+    background-color: #2c3e50;
+}
+
+/* 按钮颜色 */
+QPushButton {
+    background-color: #2ecc71;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* 按钮悬停状态颜色 */
+QPushButton:hover {
+    background-color: #27ae60;
+}
+
+/* 按钮按下状态颜色 */
+QPushButton:pressed {
+    background-color: #2ecc71;
+}
+
+/* 标签颜色 */
+QLabel {
+    color: black;
+    font-size: 14px;
+}
+
+/* 文本框颜色 */
+QLineEdit {
+    background-color: #ecf0f1;
+    color: #34495e;
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+/* 下拉菜单颜色 */
+QComboBox {
+    background-color: #ecf0f1;
+    color: #34495e;
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+/* 滚动条样式 */
+QScrollBar:vertical {
+    width: 12px;
+    margin: 12px 0 12px 0;
+    background-color: transparent;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #bdc3c7;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::add-line:vertical {
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* 分割线颜色 */
+QFrame[objectName=&quot;separator&quot;] {
+    background-color: #bdc3c7;
+    border: 0px;
+}</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout_3">

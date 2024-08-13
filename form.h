@@ -21,7 +21,7 @@ private slots:
 signals:
     void sig_switch(int baud,int parity,int stop,int data);
 
-private:
+protected:
     Ui::Form *ui;
 
 };

@@ -192,4 +192,7 @@ quint32 utils::crc32(const QByteArray &data) const
     crc32 ^= 0xFFFFFFFF;
     return crc32;
 }
-
+QString utils::current_time(){
+    QDateTime currentTime = QDateTime::currentDateTime();
+    return  currentTime.toString("hh:mm:ss.zzz");
+}
